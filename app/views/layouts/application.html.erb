@@ -11,20 +11,29 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-
-  <body class="<%= controller.controller_name%>">
+<script src="date.js"></script>
+  <body class="<%= controller.controller_name%>" onload="load()">
     <div id= "banner">
-       <%#image_tag 'logo.svg', alt: 'Online Store' %>
+       <%= image_tag 'logo.jpeg', alt: 'Online Store' , :class => 'image'%>
       <span class="title"><%= @page_title %> </span>
     </div>
     <div id="columns">
       <div id="side">
+        <div id="cart">
+          <% if @cart %>
+          <%= render @cart %>
+          <% end %>
+        </div>
+
         <ul>
-          <li><a href="http://www.....">Home</a></li>
+          <li><%= link_to 'Home', store_index_path %></li>
           <li><a href="http://www...../faq">Questions</a></li>
           <li><a href="http://www...../news">News</a></li>
           <li><a href="http://www...../contact">Contact</a></li>
+          <span id="date"> </span> <br>
+          <span id="time"></span>
         </ul>
+
       </div>
       <div id="main">
 

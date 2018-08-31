@@ -22,7 +22,7 @@
     min-height: 100px;
 
 
-}
+
 
   img {
     width: 80px;
@@ -44,12 +44,30 @@
     margin-left: 100px;
     margin-top: 0.5em;
     margin-bottom: 0.8em;
+    form, div{
+      display: inline;
+    }
 
   }
   .price{
     color: #44a;
     font-weight: bold;
     margin-right: 3em;
+
+
+}
+
+
+}
+
+#notice{
+border: 2px solid;
+background-color: #F0DFDF;
+position: inline ;
+height: 5%;
+width: 100vh;
+color:red;
+font-weight: bold;
 
 
 }
